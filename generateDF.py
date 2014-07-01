@@ -12,7 +12,7 @@ else:
 
 WordList = []	
 for filename in os.listdir(dir):
-	WordList.extend(getWordList(os.path.join(dir,filename)))
+	WordList.extend(list(set(getWordList(os.path.join(dir,filename)))))
 	
 WordCount = getWordCount(WordList)
 
