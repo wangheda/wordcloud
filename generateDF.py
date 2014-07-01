@@ -17,5 +17,5 @@ for filename in os.listdir(dir):
 WordCount = getWordCount(WordList)
 
 with open("df.dict", "w") as F:
-	F.writelines([(word+" "+str(WordCount[word])+"\n").encode('utf8') for word in WordCount])
+	F.writelines([(word+" "+str(WordCount[word])+"\n").encode('gbk') for word in WordCount])
 	
