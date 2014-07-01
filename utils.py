@@ -26,9 +26,11 @@ def loadWordCount(dictname):
 	WordCount = {}
 	with open(dictname) as F:
 		for line in F.readlines():
-			word, count = line.strip().decode('utf8').split()
-			word, count = word, int(count)
-			WordCount[word] = count
+			line = line.strip().decode("utf8")
+			if len(line.split()) == 2:
+				word, count = line.split()
+				word, count = word, int(count)
+				WordCount[word] = count
 	return WordCount
 	
 	

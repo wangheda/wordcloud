@@ -14,9 +14,6 @@ else:
 
 WordList = getWordList(filename)
 tfWordCount = getWordCount(WordList)
-for word in tfWordCount:
-	print word, tfWordCount
-
 dfWordCount = loadWordCount("df.dict")
 WordSelected = selectWordByTfidf(tfWordCount, dfWordCount)
 drawGraph(WordSelected, "picture.jpg")
